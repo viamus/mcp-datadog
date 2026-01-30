@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/Viamus.DataDog.Mcp.Server/Viamus.DataDog.Mcp.Server.csproj" Id="c9007ab5-b10e-4239-aed7-3e8a01aa687d" />
+  <Project Path="tests/Viamus.DataDog.Mcp.Server.Tests/Viamus.DataDog.Mcp.Server.Tests.csproj" Id="db6aba02-656e-41bc-9ac1-af92c9bb0125" />
+</Solution>
