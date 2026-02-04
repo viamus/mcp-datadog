@@ -102,11 +102,11 @@ docker compose up -d
 ### Verify Setup
 
 ```bash
-# .NET CLI (port 5000)
-curl http://localhost:5000/health
+# .NET CLI (port 5100)
+curl http://localhost:5100/health
 
-# Docker (port 8080)
-curl http://localhost:8080/health
+# Docker (port 8081)
+curl http://localhost:8081/health
 ```
 
 ---

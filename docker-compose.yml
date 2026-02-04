@@ -4,17 +4,17 @@ services:
       context: .
       dockerfile: src/Viamus.DataDog.Mcp.Server/Dockerfile
     ports:
-      - "8080:8080"
+      - "8081:8081"
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTP_PORTS=8081
       - Datadog__ApiKey=${DATADOG_API_KEY}
       - Datadog__ApplicationKey=${DATADOG_APPLICATION_KEY}
       - Datadog__Site=${DATADOG_SITE:-datadoghq.com}
     env_file:
       - .env
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8081/health"]
       interval: 30s
       timeout: 10s
       retries: 3

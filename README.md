@@ -40,23 +40,23 @@ DATADOG_SITE=datadoghq.com
 **Option A - Docker (recommended):**
 ```bash
 docker compose up -d
-# Server runs at http://localhost:8080
+# Server runs at http://localhost:8081
 ```
 
 **Option B - .NET CLI:**
 ```bash
 dotnet run --project src/Viamus.DataDog.Mcp.Server
-# Server runs at http://localhost:5000
+# Server runs at http://localhost:5100
 ```
 
 ### 3. Verify it's working
 
 ```bash
 # Docker
-curl http://localhost:8080/health
+curl http://localhost:8081/health
 
 # .NET CLI
-curl http://localhost:5000/health
+curl http://localhost:5100/health
 ```
 
 You should see: `Healthy`
@@ -157,7 +157,7 @@ Best for: Production use, quick setup without .NET installed
 docker compose up -d
 ```
 
-Server URL: `http://localhost:8080`
+Server URL: `http://localhost:8081`
 
 **Useful commands:**
 ```bash
@@ -179,7 +179,7 @@ export Datadog__ApplicationKey="your-application-key"
 dotnet run --project src/Viamus.DataDog.Mcp.Server
 ```
 
-Server URL: `http://localhost:5000`
+Server URL: `http://localhost:5100`
 
 ### Option 3: Self-Contained Executable
 
@@ -216,7 +216,7 @@ Then run the executable directly:
 
 **Option A - Using CLI (recommended):**
 ```bash
-claude mcp add datadog --transport http http://localhost:8080
+claude mcp add datadog --transport http http://localhost:8081
 ```
 
 **Option B - Manual configuration:**
@@ -229,7 +229,7 @@ Edit `claude_desktop_config.json`:
 {
   "mcpServers": {
     "datadog": {
-      "url": "http://localhost:8080"
+      "url": "http://localhost:8081"
     }
   }
 }
@@ -239,7 +239,7 @@ Edit `claude_desktop_config.json`:
 
 Run from your project directory:
 ```bash
-claude mcp add datadog --transport http http://localhost:8080
+claude mcp add datadog --transport http http://localhost:8081
 ```
 
 Or add manually to `.claude/settings.json`:
@@ -248,13 +248,13 @@ Or add manually to `.claude/settings.json`:
   "mcpServers": {
     "datadog": {
       "type": "http",
-      "url": "http://localhost:8080"
+      "url": "http://localhost:8081"
     }
   }
 }
 ```
 
-> **Note**: Use port `5000` if running with .NET CLI, or `8080` if running with Docker.
+> **Note**: Use port `5100` if running with .NET CLI, or `8081` if running with Docker.
 
 ---
 
@@ -345,7 +345,7 @@ dotnet user-secrets set "Datadog:ApplicationKey" "your-application-key"
    docker compose ps
 
    # Check if port is in use
-   netstat -an | grep 8080  # or 5000
+   netstat -an | grep 8081  # or 5100
    ```
 
 2. Check logs for errors:
@@ -379,7 +379,7 @@ dotnet user-secrets set "Datadog:ApplicationKey" "your-application-key"
 
 1. Check if `.env` file exists and has the required credentials
 2. View logs: `docker compose logs`
-3. Ensure port 8080 is not in use by another application
+3. Ensure port 8081 is not in use by another application
 </details>
 
 <details>
