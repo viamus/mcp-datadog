@@ -6,7 +6,7 @@ public class DatadogSettings
 
     public required string ApiKey { get; set; }
     public required string ApplicationKey { get; set; }
-    public string Site { get; set; } = "datadoghq.com";
+    public string Site { get; set; } = "api.datadoghq.com";
 
     public string BaseUrl => $"https://{Site}";
 }

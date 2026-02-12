@@ -31,7 +31,7 @@ Edit `.env` with your Datadog API keys:
 ```env
 DATADOG_API_KEY=your-api-key-here
 DATADOG_APPLICATION_KEY=your-application-key-here
-DATADOG_SITE=datadoghq.com
+DATADOG_SITE=api.datadoghq.com
 ```
 
 > **Need API Keys?** See [Creating Datadog API Keys](#creating-datadog-api-keys) below.
@@ -309,7 +309,7 @@ After configuring the MCP client, you can ask questions like:
 |----------|----------|---------|-------------|
 | `Datadog__ApiKey` | Yes | - | Your Datadog API Key |
 | `Datadog__ApplicationKey` | Yes | - | Your Datadog Application Key |
-| `Datadog__Site` | No | `datadoghq.com` | Datadog site/region |
+| `Datadog__Site` | No | `api.datadoghq.com` | Datadog site/region |
 
 ### appsettings.json
 
@@ -318,7 +318,7 @@ After configuring the MCP client, you can ask questions like:
   "Datadog": {
     "ApiKey": "your-api-key",
     "ApplicationKey": "your-application-key",
-    "Site": "datadoghq.com"
+    "Site": "api.datadoghq.com"
   }
 }
 ```

@@ -22,8 +22,8 @@ public class DatadogSettingsTests
         };
 
         // Assert
-        settings.Site.Should().Be("datadoghq.com");
-        settings.BaseUrl.Should().Be("https://datadoghq.com");
+        settings.Site.Should().Be("api.datadoghq.com");
+        settings.BaseUrl.Should().Be("https://api.datadoghq.com");
     }
 
     [Theory]
