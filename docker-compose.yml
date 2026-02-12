@@ -12,7 +12,7 @@ services:
       - ServerSecurity__RequireApiKey=${SERVER_REQUIRE_API_KEY:-false}
       - Datadog__ApiKey=${DATADOG_API_KEY}
       - Datadog__ApplicationKey=${DATADOG_APPLICATION_KEY}
-      - Datadog__Site=${DATADOG_SITE:-datadoghq.com}
+      - Datadog__Site=${DATADOG_SITE:-api.datadoghq.com}
     env_file:
       - .env
     healthcheck:
